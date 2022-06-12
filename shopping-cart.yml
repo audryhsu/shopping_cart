@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  server:
+    image: audryhsu/shopping-cart-server:latest
+    container_name: server
+    ports:
+      - 5001:5001
+    env_file: .env
+  client:
+    image: audryhsu/shopping-cart-client:latest
+    container_name: client
+    ports:
+      - 3000:3000
